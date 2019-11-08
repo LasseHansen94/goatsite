@@ -12,7 +12,7 @@ import java.util.List;
 @Controller
 public class MainViewController {
     @GetMapping(value = "/test")
-    public String tryTheThestPath(Model model, @RequestParam(value = "name") String name){
+    public String tryTheTestPath(Model model, @RequestParam(value = "name") String name){
         model.addAttribute("name",  name);
 
 
