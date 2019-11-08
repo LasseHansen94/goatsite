@@ -77,5 +77,4 @@ public class Goat {
     @OneToMany(mappedBy = "goat2id")
     @OnDelete(action = OnDeleteAction.CASCADE)
     private List<Match> goat2Matches;
-
 }
