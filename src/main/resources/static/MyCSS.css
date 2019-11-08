@@ -1,0 +1,18 @@
+
+
+body{
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+#advertisements{
+    font-size: 15px;
+}
+
+.login{
+    float: right;
+    padding-right: 150px;
+
+    border: solid blueviolet;
+    border-radius: 5px;
+}
