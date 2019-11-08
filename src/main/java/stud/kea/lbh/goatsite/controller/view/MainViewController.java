@@ -23,7 +23,7 @@ public class MainViewController {
         return "test.html";
     }
 
-    @GetMapping(value = "/mainmenu")
+    @GetMapping(value = "/")
     public String mainMenu(){
         return "mainmenu.html";
     }
