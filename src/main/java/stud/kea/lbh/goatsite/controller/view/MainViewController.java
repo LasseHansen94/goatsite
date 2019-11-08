@@ -2,8 +2,9 @@ package stud.kea.lbh.goatsite.controller.view;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+import stud.kea.lbh.goatsite.controller.api.GoatApiController;
+import stud.kea.lbh.goatsite.repository.GoatRepository;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -21,6 +22,11 @@ public class MainViewController {
         model.addAttribute("qualities", qualities);
 
         return "test.html";
+    }
+
+    @GetMapping(value = "/myprofile")
+    public String myProfile(){
+        return "myprofile.html";
     }
 
     @GetMapping(value = "/mainmenu")
