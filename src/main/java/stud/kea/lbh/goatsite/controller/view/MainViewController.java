@@ -5,7 +5,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 
@@ -33,5 +32,10 @@ public class MainViewController {
         model.addAttribute("name", name);
 
         return "profile.html";
+    }
+
+    @GetMapping(value = "/match")
+    public String getMatch(){
+        return "match.html";
     }
 }
