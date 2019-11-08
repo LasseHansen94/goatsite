@@ -23,6 +23,11 @@ public class MainViewController {
         return "test.html";
     }
 
+    @GetMapping(value = "/mainmenu")
+    public String mainMenu(){
+        return "mainmenu.html";
+    }
+
     @GetMapping(value = "/profile")
     public String getProfile(Model model, @RequestParam(value = "name") String name){
         model.addAttribute("name", name);
