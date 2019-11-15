@@ -18,7 +18,8 @@ p, h1, h2, h3, h4, h5, h6{
     font-size: 15px;
 }
 .advertisements{
-    border-top: solid black;
+    border-top: solid deeppink;
+    font-size: 11px;
 }
 
 #logo{
