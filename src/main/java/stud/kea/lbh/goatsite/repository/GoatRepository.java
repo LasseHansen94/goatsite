@@ -9,7 +9,8 @@ import stud.kea.lbh.goatsite.model.Like;
 
 @Repository
 public interface GoatRepository extends CrudRepository<Goat, Long> {
-    Iterable<Goat> findByName(String name);
+//    Iterable<Goat> findByName(String name);
+    Goat findByName(String name);
 
     Iterable<Goat> findByGender(Gender gender);
 

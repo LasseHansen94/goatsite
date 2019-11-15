@@ -28,7 +28,7 @@ public class GoatApiController {
     }
 
     @GetMapping("goats/findbyname")
-    public Iterable<Goat> getGoatsByName(@RequestParam(value = "name") String name){
+    public Goat getGoatsByName(@RequestParam(value = "name") String name){
         return goatRepository.findByName(name);
     }
 
