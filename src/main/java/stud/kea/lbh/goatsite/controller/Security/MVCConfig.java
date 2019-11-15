@@ -9,5 +9,7 @@ public class MVCConfig implements WebMvcConfigurer {
 
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/mainmenu").setViewName("mainmenu");
+        registry.addViewController("/").setViewName("mainmenu");
+        registry.addViewController("/match").setViewName("match");
     }
 }
