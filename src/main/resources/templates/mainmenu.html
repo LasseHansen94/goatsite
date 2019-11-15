@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="/MyCSS.css">
@@ -21,30 +21,11 @@
     Please input your login information.
 </p>
 
-<div class="login">
-    <table>
-        <tr>
-            <td>
-                <label>Brugernavn: </label>
-            </td>
-            <td>
-                <input type="text" name="username"/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label>Password: </label>
-            </td>
-            <td>
-                <input type="text" name="password"/>
-            </td>
-        </tr>
-
-    </table>
-    <tr>
-        <button type="button">Go(at)!</button>
-    </tr>
-</div>
+<form th:action="@{/login}" method="post">
+    <div><label> User Name : <input type="text" name="username"/> </label></div>
+    <div><label> Password: <input type="password" name="password"/> </label></div>
+    <div><input type="submit" value="Sign In"/></div>
+</form>
 
 
 <footer>
