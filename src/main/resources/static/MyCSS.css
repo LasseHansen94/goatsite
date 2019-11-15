@@ -8,6 +8,18 @@ body{
 #advertisements{
     font-size: 15px;
 }
+.advertisements{
+    border-top: solid black;
+}
+
+#logo{
+    text-align:center;
+    margin: 0 auto;
+}
+
+#hornyHamsterDescription{
+    font-size: 8px;
+}
 
 .login{
     float: right;
