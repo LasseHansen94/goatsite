@@ -128,21 +128,19 @@ class Carousel {
             // check threshold
             if (propX > 0.25 && e.direction == Hammer.DIRECTION_RIGHT) {
 
+                // Add method here
+
                 successful = true
                 // get right border position
                 posX = this.board.clientWidth
 
             } else if (propX < -0.25 && e.direction == Hammer.DIRECTION_LEFT) {
 
+                // Add method here
+
                 successful = true
                 // get left border position
-                posX = - (this.board.clientWidth + this.topCard.clientWidth)
-
-            } else if (propY < -0.25 && e.direction == Hammer.DIRECTION_UP) {
-
-                successful = true
-                // get top border position
-                posY = - (this.board.clientHeight + this.topCard.clientHeight)
+                posX = -(this.board.clientWidth + this.topCard.clientWidth)
 
             }
 
