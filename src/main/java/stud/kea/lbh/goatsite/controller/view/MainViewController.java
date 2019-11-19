@@ -52,4 +52,11 @@ public class MainViewController {
     public String getMatch(){
         return "match.html";
     }
+
+
+    @GetMapping(value = "/myprofile")
+    public String myProfile(){
+        return "myprofile.html";
+    }
+
 }

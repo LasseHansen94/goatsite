@@ -7,24 +7,28 @@
 </head>
 <body>
 
-<div id="logo">
-    <div>
-        <img style="text-align: center" src="images/rainbow.jpg" alt="" height="250" width="350">
-    </div>
-    <h1>
-        Goat Grinder
-    </h1>
+<div style="float: right">
+    <p> Please input your login information. </p>
+    <form th:action="@{/login}" method="post">
+        <div style="float: left"><label> User Name : <input type="text" name="username"/> </label></div>
+        <div style="float: left"><label> Password: <input type="password" name="password"/> </label></div>
+        <div style="float: left;"><input type="submit" value="Sign In"/></div>
+    </form>
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+
 </div>
 
-<p>
-    Please input your login information.
-</p>
+<div id="logo">
+    <div>
+        <img style="text-align: center" src="images/rainbow.png" alt="" height="300" width="600">
+    </div>
+    <div>
+        <h1 style="text-align: center"> Goat Grindr </h1>
+    </div>
 
-<form th:action="@{/login}" method="post">
-    <div><label> User Name : <input type="text" name="username"/> </label></div>
-    <div><label> Password: <input type="password" name="password"/> </label></div>
-    <div><input type="submit" value="Sign In"/></div>
-</form>
+</div>
 
 <footer class="advertisements">
 
@@ -32,33 +36,35 @@
         Advertisements from our partner sites
     </h1>
 
-    <div style="font-size: 11px; float: left">
-        <div style="float: left; padding-right: 20px">
-            <img src="images/hornyHamster.png" height="150" width="150">
+    <div>
+        <div style="font-size: 11px; float: left">
+            <div style="float: left; padding-right: 20px">
+                <img src="images/hornyHamster.png" height="150" width="150">
+            </div>
+            <div style="padding-right: 20px; float: left; border-right: solid blueviolet">
+                <p>
+                <p>Find hot horny hamsters nearby you.
+                <p>We offer all types of sizes and color variations.
+                <p>With a premium subscription,
+                <p>you even get access to retired "show hamsters".
+                <p>What are you waiting for?
+                </p>
+            </div>
         </div>
-        <div style="padding-right: 20px; float: left; border-right: solid deeppink">
-            <p>
-            <p>Find hot horny hamsters nearby you.
-            <p>We offer all types of sizes and color variations.
-            <p>With a premium subscription,
-            <p>you even get access to retired "show hamsters".
-            <p>What are you waiting for?
-            </p>
-        </div>
-    </div>
 
-    <div style="font-size: 11px">
-        <div>
-            <img style="padding-left: 20px"; src="images/TortoiseTinder.png" height="150" width="150">
-        </div>
-        <div style="float:top">
-            <p>
-            <p>Worlds biggest dating site for tortoises.
-            <p>We currently offer at innovative website.
-            <p>We promise you to find a tortoise,
-            <p>of your liking with the speed of a tortoise
-            <p>Grab your roundest shield and find your tortoise?
-            </p>
+        <div style="font-size: 11px">
+            <div style="float:left;">
+                <img style="padding-left: 20px" src="images/TortoiseTinder.png" height="150" width="150">
+            </div>
+            <div style="float:left; padding-left: 20px" >
+                <p>
+                <p>Worlds biggest dating site for tortoises.
+                <p>We currently offer at innovative website.
+                <p>We promise you to find a tortoise,
+                <p>of your liking with the speed of a tortoise
+                <p>Grab your roundest shield and find your tortoise?
+                </p>
+            </div>
         </div>
     </div>
 </footer>
