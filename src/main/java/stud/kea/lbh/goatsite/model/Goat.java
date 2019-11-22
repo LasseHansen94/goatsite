@@ -16,6 +16,8 @@ import java.util.List;
 @Table(name = "goats")
 public class Goat {
 
+    private int userID;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

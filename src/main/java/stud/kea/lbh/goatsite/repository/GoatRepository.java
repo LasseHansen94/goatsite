@@ -14,8 +14,10 @@ public interface GoatRepository extends CrudRepository<Goat, Long> {
 
     Iterable<Goat> findByGender(Gender gender);
 
-    @Query(value = "SELECT * FROM Goats g WHERE g.id < 4", nativeQuery = true)
+    @Query(value = "SELECT * FROM goats g WHERE g.id < 4", nativeQuery = true)
     Iterable<Goat> findTheOldTimers();
+
+    int findIdByUsername(String username);
 
     /*
     //todo lav en create like
