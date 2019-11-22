@@ -181,7 +181,7 @@ class Carousel {
 
         card.classList.add('card');
 
-        card.style.backgroundImage = "url('https://picsum.photos/320/320/?random=" + Math.round(Math.random()*1000000) + "')"
+        card.style.backgroundImage = "url('http://placegoat.com/320/320=" + Math.round(Math.random()*1000000) + "')"
 
         if (this.board.firstChild) {
             this.board.insertBefore(card, this.board.firstChild)
