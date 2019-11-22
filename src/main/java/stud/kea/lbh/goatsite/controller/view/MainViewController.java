@@ -70,6 +70,11 @@ public class MainViewController {
     public void getID(){
     }
 
+    @GetMapping(value = "/updateprofile")
+    public String updateProfile(){
+        return "updateprofile.html";
+    }
+
     @GetMapping(value = "/carousel")
     public void getIdByUsername(){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -86,5 +91,6 @@ public class MainViewController {
     public String loginSubmit(@ModelAttribute Model model){
         return null;
     }
+
 
 }
