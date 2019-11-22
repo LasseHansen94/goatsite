@@ -1,5 +1,6 @@
 package stud.kea.lbh.goatsite.controller.view;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,6 +10,7 @@ import stud.kea.lbh.goatsite.repository.GoatRepository;
 
 import java.util.Arrays;
 import java.util.List;
+
 
 @Controller
 public class MainViewController {
@@ -53,10 +55,14 @@ public class MainViewController {
         return "match.html";
     }
 
-
     @GetMapping(value = "/myprofile")
     public String myProfile(){
         return "myprofile.html";
+    }
+
+    @GetMapping(value = "/createprofile")
+    public String createProfile(){
+        return "createprofile.html";
     }
 
 }
