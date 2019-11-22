@@ -26,6 +26,7 @@ public class MainViewController {
     public String tryTheTestPath(Model model, @RequestParam(value = "name") String name){
         model.addAttribute("name",  name);
 
+
         List<String> qualities = Arrays.asList("Can dance", "can run", "can sing");
 
         model.addAttribute("qualities", qualities);
@@ -58,7 +59,6 @@ public class MainViewController {
         return "match.html";
     }
 
-
     @GetMapping(value = "/myprofile")
     public String myProfile(){
         return "myprofile.html";
@@ -73,6 +73,11 @@ public class MainViewController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         Goat goat = new Goat();
         goat.setUserID(goatApiController.findIdByUserName(authentication.getName()));
+    }
+
+    @GetMapping(value = "/createprofile")
+    public String createProfile(){
+        return "createprofile.html";
     }
 
 }

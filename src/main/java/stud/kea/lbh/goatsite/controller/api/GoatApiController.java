@@ -7,8 +7,6 @@ import stud.kea.lbh.goatsite.model.Goat;
 import stud.kea.lbh.goatsite.repository.GoatRepository;
 
 import javax.validation.Valid;
-import java.util.NoSuchElementException;
-import java.util.Optional;
 
 @RestController
 @RequestMapping(value = "/api")
