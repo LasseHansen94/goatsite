@@ -25,9 +25,6 @@ public class GoatApiController {
         return goatRepository.save(goat);
     }
 
-
-
-
     @GetMapping("goats/findIdByUsername")
     public long findIdByUserName(String userName) {
         return goatRepository.findGoatByUsername(userName).getId();
@@ -59,6 +56,11 @@ public class GoatApiController {
     @GetMapping("/goats/oldtimers")
     public Iterable<Goat> getOldTimers(){
         return goatRepository.findTheOldTimers();
+    }
+
+    @PostMapping("/updateprofile")
+    public Goat updateGoat(@Valid @RequestBody Goat goat){
+        return goatRepository.save(goat);
     }
 
 
