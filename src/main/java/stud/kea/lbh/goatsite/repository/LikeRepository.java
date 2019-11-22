@@ -5,5 +5,4 @@ import org.springframework.stereotype.Repository;
 import stud.kea.lbh.goatsite.model.Like;
 
 @Repository
-public interface LikeRepository extends CrudRepository<Like, Long> {
-}
+public interface LikeRepository extends CrudRepository<Like, Long> { }

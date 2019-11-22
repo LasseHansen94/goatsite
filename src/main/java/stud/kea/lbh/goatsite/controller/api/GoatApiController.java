@@ -32,6 +32,10 @@ public class GoatApiController {
         return goatRepository.findByName(name);
     }
 
+    @GetMapping("goats/findIdByUserName")
+    public int findIdByUserName(@RequestParam(value = "username") String username) {
+        return goatRepository.findIdByUsername(username);}
+
     @GetMapping("goats/findbygender")
     public Iterable<Goat> getGoatByGender(@RequestParam(value = "gender") Gender gender){
         return goatRepository.findByGender(gender);

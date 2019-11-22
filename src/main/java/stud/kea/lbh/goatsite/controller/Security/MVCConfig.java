@@ -8,8 +8,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class MVCConfig implements WebMvcConfigurer {
 
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/mainmenu").setViewName("mainmenu");
-        registry.addViewController("/").setViewName("mainmenu");
+        registry.addViewController("/mainmenu").setViewName("mainMenu");
+        registry.addViewController("/").setViewName("mainMenu");
         registry.addViewController("/match").setViewName("match");
         registry.addViewController("/test").setViewName("test");
         registry.addViewController("/carousel").setViewName("carousel");
