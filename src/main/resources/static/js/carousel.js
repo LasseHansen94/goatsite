@@ -130,14 +130,17 @@ class Carousel {
 
                 // Add method here
 
+                console.log("Right");
 
-                successful = true
+
+                successful = true;
                 // get right border position
                 posX = this.board.clientWidth
 
             } else if (propX < -0.25 && e.direction === Hammer.DIRECTION_LEFT) {
 
                 // Add method here
+                console.log("Left");
 
                 successful = true;
                 // get left border position
