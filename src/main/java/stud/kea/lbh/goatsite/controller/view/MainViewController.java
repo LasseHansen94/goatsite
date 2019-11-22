@@ -57,7 +57,6 @@ public class MainViewController {
         return "match.html";
     }
 
-
     @GetMapping(value = "/myprofile")
     public String myProfile(){
         return "myprofile.html";
