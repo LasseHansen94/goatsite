@@ -1,6 +1,8 @@
 package stud.kea.lbh.goatsite.controller.Security;
 
 
+import lombok.extern.java.Log;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -11,10 +13,18 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import stud.kea.lbh.goatsite.controller.api.GoatApiController;
+import stud.kea.lbh.goatsite.controller.view.MainViewController;
+import stud.kea.lbh.goatsite.model.LoginInformation;
 
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    GoatApiController goatApiController;
+    LoginInformation loginInformation;
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
@@ -39,11 +49,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public UserDetailsService userDetailsService() {
         UserDetails user =
                 User.withDefaultPasswordEncoder()
-                        .username("123")
-                        .password("123")
+                        .username(loginInformation.getUserName())
+                        .password(loginInformation.getPassword())
                         .roles("USER")
                         .build();
 
         return new InMemoryUserDetailsManager(user);
     }
+
 }

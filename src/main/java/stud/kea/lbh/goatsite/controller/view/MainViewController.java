@@ -6,6 +6,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import stud.kea.lbh.goatsite.controller.api.GoatApiController;
 import stud.kea.lbh.goatsite.model.Goat;
@@ -78,6 +80,11 @@ public class MainViewController {
     @GetMapping(value = "/createprofile")
     public String createProfile(){
         return "createprofile.html";
+    }
+
+    @PostMapping(value = "/mainmenu")
+    public String loginSubmit(@ModelAttribute Model model){
+        return null;
     }
 
 }

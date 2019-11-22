@@ -25,17 +25,15 @@ public class GoatApiController {
         return goatRepository.save(goat);
     }
 
-
-
-
     @GetMapping("goats/findIdByUsername")
     public long findIdByUserName(String userName) {
         return goatRepository.findGoatByUsername(userName).getId();
     }
 
-
-
-
+    @GetMapping("goats/findPasswordByUsername")
+    public String getPasswordByUsername(String username) {
+        return goatRepository.findGoatByUsername(username).getPassword();
+    }
 
     @GetMapping("goats/findbygender")
     public Iterable<Goat> getGoatByGender(@RequestParam(value = "gender") Gender gender){
