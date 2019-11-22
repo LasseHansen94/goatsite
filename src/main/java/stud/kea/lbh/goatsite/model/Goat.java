@@ -2,6 +2,7 @@ package stud.kea.lbh.goatsite.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
+import lombok.ToString;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 import org.hibernate.validator.constraints.Length;
@@ -16,7 +17,8 @@ import java.util.List;
 @Table(name = "goats")
 public class Goat {
 
-    private int userID;
+    @Transient
+    private long userID;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

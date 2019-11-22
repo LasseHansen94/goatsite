@@ -19,6 +19,8 @@ public class MainViewController {
 
     @Autowired
     GoatRepository goatRepository;
+    @Autowired
+    GoatApiController goatApiController;
 
     @GetMapping(value = "/test")
     public String tryTheTestPath(Model model, @RequestParam(value = "name") String name){
@@ -70,9 +72,7 @@ public class MainViewController {
     public void getIdByUsername(){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         Goat goat = new Goat();
-        GoatApiController goatApiController = new GoatApiController();
         goat.setUserID(goatApiController.findIdByUserName(authentication.getName()));
-        System.out.println(authentication.getName());
     }
 
 }

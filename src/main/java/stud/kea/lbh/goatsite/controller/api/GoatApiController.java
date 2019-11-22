@@ -27,14 +27,17 @@ public class GoatApiController {
         return goatRepository.save(goat);
     }
 
-    @GetMapping("goats/findbyname")
-    public Goat getGoatsByName(@RequestParam(value = "name") String name){
-        return goatRepository.findByName(name);
+
+
+
+    @GetMapping("goats/findIdByUsername")
+    public long findIdByUserName(String userName) {
+        return goatRepository.findGoatByUsername(userName).getId();
     }
 
-    @GetMapping("goats/findIdByUserName")
-    public int findIdByUserName(@RequestParam(value = "username") String username) {
-        return goatRepository.findIdByUsername(username);}
+
+
+
 
     @GetMapping("goats/findbygender")
     public Iterable<Goat> getGoatByGender(@RequestParam(value = "gender") Gender gender){
