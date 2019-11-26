@@ -76,16 +76,18 @@ public class MainViewController {
     }
 
     @GetMapping(value = "/carousel")
-    public void getIdByUsername(){
+    public String getIdByUsername(){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         Goat goat = new Goat();
         goat.setUserID(goatApiController.findIdByUserName(authentication.getName()));
+        return "carousel.html";
     }
 
     @GetMapping(value = "/createprofile")
     public String createProfile(){
         return "createprofile.html";
     }
+
 
     /*
     @PostMapping(value = "/mainmenu")
