@@ -58,12 +58,23 @@ public class GoatApiController {
     public Iterable<Goat> getOldTimers(){
         return goatRepository.findTheOldTimers();
     }
+    @PostMapping(value = "/createnewprofile")
+    public String createGoatProfile(@ModelAttribute Goat goat){
+        System.out.println("TEst");
+        goatRepository.save(goat);
 
-
+        System.out.println(goat.getName());
+        return "redirect:/";
+    }
+/*
     @PostMapping("/updateprofile")
     public Goat updateGoat(@Valid @RequestBody Goat goat){
         return goatRepository.save(goat);
     }
+*/
+
+
+
 
 
 
