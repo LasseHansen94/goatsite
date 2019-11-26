@@ -10,13 +10,15 @@ body{
 }
 p, h1, h2, h3, h4, h5, h6{
     font-weight: 500;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
 }
 
 #advertisements{
     font-size: 15px;
 }
 .advertisements{
-    border-top: solid blueviolet;
+    border-top: whitesmoke;
     font-size: 11px;
 }
 
@@ -33,7 +35,7 @@ p, h1, h2, h3, h4, h5, h6{
     float: right;
     padding-right: 150px;
 
-    border: solid blueviolet;
+    border: whitesmoke;
     border-radius: 5px;
 }
 
