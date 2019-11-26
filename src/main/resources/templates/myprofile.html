@@ -17,6 +17,12 @@
         <form th:action="@{/updateprofile}" method="get">
             <input type="submit" value="Update Profile"/>
         </form>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+        <form th:action="@{/carousel}" method="get">
+            <input type="submit" value="Get Grinding"/>
+        </form>
 
 </header>
     <div class="container">
@@ -29,11 +35,8 @@
     </div>
     <div>
     <h2>Short description</h2>
-</div>
-    <form th:action="@{/logout}" method="post">
-        <input type="submit" value="Sign Out"/>
-    </form>
-</div>
+    </div>
+
 </div>
 </body>
 </html>

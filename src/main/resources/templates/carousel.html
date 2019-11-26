@@ -142,8 +142,7 @@
 
             if (propX > 0.25 && e.direction === Hammer.DIRECTION_RIGHT) {
 
-
-                console.log("Right");
+                console.log("Yes");
 
 
                 successful = true;
@@ -151,7 +150,7 @@
 
             } else if (propX < -0.25 && e.direction === Hammer.DIRECTION_LEFT) {
 
-                console.log("Left");
+                console.log("No");
 
                 successful = true;
                 posX = -(this.board.clientWidth + this.topCard.clientWidth)
