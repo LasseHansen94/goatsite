@@ -66,13 +66,13 @@ public class MainViewController {
         return "myprofile.html";
     }
 
-    @GetMapping(value = "/getID")
-    public void getID(){
-    }
-
     @GetMapping(value = "/updateprofile")
     public String updateProfile(){
         return "updateprofile.html";
+    }
+
+    @GetMapping(value = "/getID")
+    public void getID(){
     }
 
     @GetMapping(value = "/carousel")
@@ -87,10 +87,13 @@ public class MainViewController {
         return "createprofile.html";
     }
 
+    /*
     @PostMapping(value = "/mainmenu")
     public String loginSubmit(@ModelAttribute Model model){
         return null;
     }
+
+     */
 
 
 }

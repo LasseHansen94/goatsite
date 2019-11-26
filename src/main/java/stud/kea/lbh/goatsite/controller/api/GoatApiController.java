@@ -59,10 +59,13 @@ public class GoatApiController {
         return goatRepository.findTheOldTimers();
     }
 
+
     @PostMapping("/updateprofile")
     public Goat updateGoat(@Valid @RequestBody Goat goat){
         return goatRepository.save(goat);
     }
+
+
 
 
 }
