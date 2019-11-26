@@ -9,8 +9,8 @@
 
 <div style="float: right">
     <p> Please input your login information. </p>
-    <form th:action="@{/mainmenu}" th:object="${model}" method="post">
-        <div style="float: left"><label> User Name : <input type="text" name="username" th:field="*{username}"/> </label></div>
+    <form th:action="@{/mainmenu}" method="post">
+        <div style="float: left"><label> User Name : <input type="text" name="username"/> </label></div>
         <div style="float: left"><label> Password: <input type="password" name="password"/> </label></div>
         <div style="float: left;"><input type="submit" value="Sign In"/></div>
     </form>

@@ -2,8 +2,9 @@ package stud.kea.lbh.goatsite.model;
 
 import lombok.Data;
 
-@Data
+//@Data
 public class LoginInformation {
+  /*
     public String userName;
     public String password;
 
@@ -14,4 +15,7 @@ public class LoginInformation {
         // Hvis ja - Hent password og gem i attribut.
         // Hvis nej - informer bruger om fejl.
     }
+
+   */
+
 }

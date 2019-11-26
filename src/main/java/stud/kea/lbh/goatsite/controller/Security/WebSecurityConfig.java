@@ -23,7 +23,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     GoatApiController goatApiController;
-    LoginInformation loginInformation;
+    //LoginInformation loginInformation;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -49,8 +49,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public UserDetailsService userDetailsService() {
         UserDetails user =
                 User.withDefaultPasswordEncoder()
-                        .username(loginInformation.getUserName())
-                        .password(loginInformation.getPassword())
+                        .username("123")
+                        .password("123")
                         .roles("USER")
                         .build();
 

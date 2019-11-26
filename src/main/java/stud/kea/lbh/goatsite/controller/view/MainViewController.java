@@ -38,7 +38,7 @@ public class MainViewController {
 
     @GetMapping(value = "/")
     public String mainMenu(){
-        return "mainMenu.html";
+        return "mainmenu.html";
     }
 
     @GetMapping(value = "/profile")
